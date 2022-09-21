@@ -1,6 +1,2 @@
-### Js-projects
-
-## Projects Preview Links
-
-# Project 1
+# Preview Link
 [Link](https://varunuk09.github.io/Js-projects/project1)
