@@ -42,6 +42,6 @@ body{
 	background-color: green;
 }
 
-.guess__number-box,.btn,.generate-num-btn{
+.guess__number-box,.btn{
 	width:300px;
 }
