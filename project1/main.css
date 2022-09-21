@@ -1,0 +1,47 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: monospace;
+}
+
+body{
+	background:#111111;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+	flex-direction:column;
+}
+
+
+.guess__number-box{
+	border:none;
+	outline:none;
+	color:white;
+	background:transparent;
+	border-bottom:1px solid yellow;
+	padding:10px;
+	font-size:16px;
+}
+
+.btn{
+	border:none;
+	padding:10px;
+	margin-top:5px;
+	color:white;
+	background:#536dfe;
+	border-radius:3px;
+	font-weight:bolder;
+	font-family:monospace;
+	font-size:16px;
+	letter-spacing:2px;
+}
+
+.generate-num-btn{
+	background-color: green;
+}
+
+.guess__number-box,.btn,.generate-num-btn{
+	width:300px;
+}

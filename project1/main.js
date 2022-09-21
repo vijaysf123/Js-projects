@@ -1,51 +1,18 @@
 const bdy = document.querySelector('body');
 
-bdy.style.cssText = `
-					background:#111111;
-					display:flex;
-					justify-content:center;
-					align-items:center;
-					height:100vh;
-					flex-direction:column;`
 
-let html = `<input type="text" class="guess__number-box" placeholder="Guess That Number"><button>SUBMIT</button><button class="generate-num">GENERATE NUMBER</button>`;
+
+let html = `<input type="text" class="guess__number-box" placeholder="Guess That Number"><button class="btn btn-submit">SUBMIT</button><button class="btn generate-num-btn">GENERATE NUMBER</button>`;
 
 bdy.insertAdjacentHTML('afterbegin',html);
 
 const box = bdy.querySelector(".guess__number-box");
 
-box.style.cssText = `
-					border:none;
-					outline:none;
-					color:white;
-					background:transparent;
-					border-bottom:1px solid yellow;
-					padding:10px;
-					font-size:16px;
-					`;
+
 const button = box.nextElementSibling;
 
 const button2 = button.nextElementSibling;
-
-
-
-button.style.cssText = button2.style.cssText = `
-					   border:none;
-					   padding:10px;
-					   margin-top:5px;
-					   color:white;
-					   background:#536dfe;
-					   border-radius:3px;
-					   font-weight:bolder;
-					   font-family:monospace;
-					   font-size:16px;
-					   letter-spacing:2px;
-					   `;
-
-button2.style.backgroundColor = 'Green';
-
-button.style.width = button2.style.width = box.style.width = "300px"
-
+	
 //program
 
 let randomNum;
@@ -72,4 +39,4 @@ button.addEventListener('click',(e) =>{
 	button.disabled = true;
 	button2.backgroundImage = "linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0))";
 	box.value = "";
-})
+});
