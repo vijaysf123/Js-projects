@@ -47,7 +47,12 @@ function getQuote(){
 	let quoteObj = quotesByAuthors[quoteCount];
 	// to update current quote number
 	quoteCount < quotesByAuthors.length-1 ? quoteCount +=1 : quoteCount = 0;
-
+	
 	quote.innerText = quoteObj.quote;
+
 	author.innerText = quoteObj.author;
+
 }
+
+
+quoteChageBtn.addEventListener('click',getQuote);
