@@ -3,14 +3,14 @@ const clrChngBtn = bdy.querySelector('.bg__change-btn');
 
 // numbers list
 let nums = [0,1,2,3,4,5,6,7,8,9];
-
+let hexSymb = '#';
+let hexNum;
 
 // on change background color btn click
 clrChngBtn.addEventListener('click',(e) =>{
 	// getting a random color from the list
-	let hexSymb = '#';
-
-	let hexNum = '';
+	
+	hexNum = '';
 	
 	for(let i = 1;i<=6;i++){
 		hexNum += nums[parseInt(Math.random()*nums.length)];
