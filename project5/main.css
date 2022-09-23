@@ -1,0 +1,208 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: monospace;
+}
+
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: black;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+:root{
+	--hoursLineColor:black;
+	--minutesLineColor:blue;
+	--secondsLineColor:red;
+
+	--dotColor:red;
+	--hourDigitColor:green;
+}
+
+.container{
+	/*border:.4rem solid white;*/
+	width:100%;
+	max-width: 72rem;
+	height:100vh;
+	max-height: 60rem !important;
+	padding:3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container > .clock{
+	width:30rem;
+	height: 30rem;
+	border:.5rem solid white;
+	border-radius: 50%;
+	background-color: yellow;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* clock center dot */
+.container > .clock > .dot{
+	width: 1.8rem;
+	height: 1.8rem;
+	background-color: var(--dotColor);
+	border-radius: 50%;
+	z-index: 9999999;
+}
+
+
+/* clock lines */
+.clock-line{
+	position: absolute;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: center;
+}
+
+/*seconds line*/
+.container > .clock > .seconds__line{
+	background-color:var(--secondsLineColor);
+	z-index: 999;
+	width:.3rem;
+	height:49%;
+}
+
+.container > .clock > .minutes__line::before,
+.container > .clock > .hours__line::before{
+	content:'';
+	display: block;
+	border:1.3rem solid transparent;
+	align-self: flex-start;
+	margin-top: -2.5rem;
+}
+
+/*hours line*/
+.container > .clock > .hours__line{
+	background-color:var(--hoursLineColor);
+	z-index: 990;
+	width:.6rem;
+	height:36%;
+}
+
+.container > .clock > .hours__line::before{
+	border-bottom-color: var(--hoursLineColor);
+}
+
+/*minutes line*/
+.container > .clock > .minutes__line{
+	background-color:var(--minutesLineColor);
+	width:.6rem;
+	height:41%;
+}
+
+.container > .clock > .minutes__line::before{
+	border-bottom-color: var(--minutesLineColor);
+}
+
+
+/*for debug*/
+
+/*.helper{
+	position: absolute;
+	width: 83%;
+	height: 83%;
+	border-radius: 50%;
+	border:1px solid red;
+}
+
+.helper-2{
+	width: 100%;
+	height: 100%;
+	border:1px solid yellow;
+}*/
+
+
+/* hour digits */
+.hour-digit{
+	color:var(--hourDigitColor);
+	
+	font-size: 2rem;
+	z-index: 999;
+	font-weight: 700;
+	position: absolute;
+}
+
+/* digit 1 */
+.hour-digit__1{
+	top:6%;
+	right:25%;
+}
+
+/* digit 2 */
+.hour-digit__2{
+	top:23%;
+	right:8%;
+}
+
+/* digit 3 */
+.hour-digit__3{
+	right:0.5rem;
+}
+
+/* digit 4 */
+.hour-digit__4{
+	right:8%;
+	bottom:23%;
+}
+
+/* digit 5 */
+.hour-digit__5{
+	bottom:5.6%;
+	right:25%;
+}
+
+/* digit 6 */
+.hour-digit__6{
+	bottom:0;
+}
+
+/* digit 7 */
+.hour-digit__7{
+	bottom:5.6%;
+	left:25%;
+}
+
+
+/* digit 8 */
+.hour-digit__8{
+	left:8%;
+	bottom:23%;
+}
+
+/* digit 9 */
+.hour-digit__9{
+	left:0.5rem;
+}
+
+/* digit 10 */
+.hour-digit__10{
+	top:23%;
+	left:8%;
+}
+
+/* digit 11 */
+.hour-digit__11{
+	top:6%;
+	left:25%;
+}
+
+/* digit 12 */
+.hour-digit__12{
+	top:0;
+	transform: translateY(-4%);
+}
