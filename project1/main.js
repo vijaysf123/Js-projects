@@ -2,7 +2,7 @@ const bdy = document.querySelector('body');
 
 
 
-let html = `<input type="text" class="guess__number-box" placeholder="Guess That Number"><button class="btn btn-submit">SUBMIT</button><button class="btn generate-num-btn">GENERATE NUMBER</button>`;
+let html = `<input type="text" class="guess__number-box" placeholder="Guess That Number" type="number"><button class="btn btn-submit">SUBMIT</button><button class="btn generate-num-btn">GENERATE NUMBER</button>`;
 
 bdy.insertAdjacentHTML('afterbegin',html);
 
