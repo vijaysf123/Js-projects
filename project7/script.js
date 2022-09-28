@@ -7,10 +7,16 @@
         // get the inpt msg box element         
         const message = document.querySelector("#msgbox");
         const msgHtml = `${message.value}`;
+        
+        // Clear message box
+        message.value = "";
 
         // print the message         
         printMsgDiv.textContent = msgHtml;
         printMsgDiv.classList.add("msg");
+        
+        // Focus on that message
+        printMsgDiv.focus();
 
         // message will show only for 10 seconds then auto disappear               
         setTimeout(() => {
