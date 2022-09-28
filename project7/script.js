@@ -2,7 +2,7 @@
     const msgDiv = document.querySelector(".msg-div");
     const printMsgDiv = document.querySelector("#msg");
     const frm = document.querySelector(".form");
-    frm.addEventListener("click", (e) => {
+    frm.addEventListener("submit", (e) => {
         e.preventDefault();
         // get the inpt msg box element         
         const message = document.querySelector("#msgbox");
@@ -25,7 +25,7 @@
                 printMsgDiv.textContent = "";
                 printMsgDiv.classList.remove("msg");
             }, 5000);
-        } else {
+        } else{
             alert("write some message first");
         }
     })
