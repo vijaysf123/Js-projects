@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap:2rem;
+	height: 100vh;
+	overflow: hidden;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+p{
+	border:.2rem solid red;
+	width: 100%;
+	max-width: 54rem;
+	word-wrap: break-word;
+	padding: 1rem;
+}
+
+button{
+	font-size: 1.6rem;
+	padding:1rem;
+}
