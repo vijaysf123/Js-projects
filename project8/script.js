@@ -6,7 +6,7 @@ const whenNoTsk = document.querySelector("#default-task-helper");
 taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const task = document.querySelector("#task-box").value;
-    if (task != "") {
+    if (task != "" && task.trim().length !== 0) {
         // hiding default text when it is first task     
         if ((tasksList.children.length == 0)) {
             whenNoTsk.style.display = "none";
