@@ -1,0 +1,139 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primaryClr: #f5f5f5;
+  --secondaryClr: #eeeeee;
+  --ternoryClr: #4caf50;
+  --dangerClr: #f44336;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.btn {
+  font-weight: 700;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--primaryClr);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--secondaryClr);
+  width: 100%;
+  max-width: 54rem;
+  padding: 1rem;
+}
+
+.todo-div form#task-form {
+  display: flex;
+  gap: .3rem;
+}
+
+.todo-div form#task-form > #task-box {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.todo-div form#task-form > #task-submit {
+  border: .1rem solid var(--ternoryClr);
+  color: var(--ternoryClr);
+}
+
+.todo-div form#task-form > #task-submit:active {
+  background-color: var(--ternoryClr);
+  color: white;
+}
+
+.todo-div #tasks-lists {
+  max-height: 30rem;
+  overflow-y: auto;
+  margin-top: 1rem;
+  padding: 0 0 .5rem 0;
+}
+
+.todo-div #default-task-helper {
+  text-align: center;
+  margin-top: -.4rem;
+}
+
+.todo-div #tasks-lists .task {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: .3rem;
+  align-items: center;
+  word-break: break-all;
+  flex-wrap: wrap;
+}
+
+.todo-div #tasks-lists .task span {
+  background-color: black;
+  color: white;
+  margin: 0;
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.todo-div #tasks-lists .task + .task {
+  margin-top: .8rem;
+}
+
+.todo-div #tasks-lists .task .tasks-cta {
+  display: flex;
+  gap: .5rem;
+  padding-right: .3rem;
+}
+
+.todo-div #tasks-lists .task .tasks-cta .task-done {
+  background-color: var(--ternoryClr);
+}
+
+.todo-div #tasks-lists .task .tasks-cta .delete-task {
+  background-color: var(--dangerClr);
+}
+
+.todo-div #tasks-lists .task .tasks-cta .task-done, .todo-div #tasks-lists .task .tasks-cta .delete-task {
+  border: none;
+  border-radius: .4rem;
+  color: white;
+  box-shadow: .2rem .2rem .3rem black;
+  transition: box-shadow 0.5s;
+}
+
+.todo-div #tasks-lists .task .tasks-cta .task-done:active, .todo-div #tasks-lists .task .tasks-cta .delete-task:active {
+  box-shadow: none;
+}
+
+/*media query*/
+@media(max-width:425px) {
+  .todo-div #tasks-lists .task span {
+    flex-basis: 100%;
+  }
+
+  .todo-div #tasks-lists .task .tasks-cta {
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+
+  .todo-div #tasks-lists .task + .task {
+    margin-top: 2rem;
+  }
+
+}
