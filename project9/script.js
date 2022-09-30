@@ -9,7 +9,13 @@ calc.addEventListener("click", (e) => {
             if (outputBox.textContent == "Infinity" || outputBox.textContent == "NaN") {
                 outputBox.textContent = "";
             }
-            outputBox.textContent += e.target.textContent;
+
+            // check is there any number or not 
+            if (outputBox.textContent.length == 0 && isNaN(e.target.textContent)) {
+                alert("Select A Number First!!!");
+            } else {
+                outputBox.textContent += e.target.textContent;
+            }
 
         }
     }
