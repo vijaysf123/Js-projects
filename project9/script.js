@@ -7,7 +7,7 @@ calc.addEventListener("click", (e) => {
 
             // check is there inifinity text on the box      
             if (outputBox.textContent == "Infinity" || outputBox.textContent == "NaN") {
-                outputBox.textContent = "0";
+                outputBox.textContent = "";
             }
             outputBox.textContent += e.target.textContent;
 
@@ -16,7 +16,7 @@ calc.addEventListener("click", (e) => {
 
     // clear box if user click on clear btn
     if (e.target.classList.contains("clear")) {
-        outputBox.textContent = "0";
+        outputBox.textContent = "";
     }
 
     // evaluate string if
