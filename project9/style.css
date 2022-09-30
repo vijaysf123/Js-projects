@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --chrFont: 30px;
+  --chrFontWeight: 700;
+  --chrBckClr: rgba(129, 212, 250, 1);
+  --borderChar: rgba(129, 212, 250, 0.6);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(245, 245, 245, 0.5);
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  padding: 6px;
+}
+
+.calculator {
+  background-color: #fff;
+  border: 1px solid rgba(224, 224, 224, 0.6);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.updiv {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.updiv > div {
+  flex-basis: 49.2%;
+  border: 2px solid var(--borderChar);
+}
+
+.updiv > div.output-box {
+  padding: 4px;
+  font-size: 6vh;
+  overflow: auto;
+}
+
+.updiv > div.func {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  gap: 2px;
+  order: 2;
+  justify-content: center;
+}
+
+.updiv > div.func > div {
+  border: 2px solid var(--borderChar);
+  flex-basis: 24.2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--chrFont);
+  font-weight: var(--chrFontWeight);
+}
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-top: 2px;
+  justify-content: center;
+}
+
+.numbers .number {
+  border: 1px solid;
+  flex-basis: 24.2%;
+  font-size: var(--chrFont);
+  font-weight: var(--chrFontWeight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--borderChar);
+}
+
+.updiv > div.func > div, .numbers .number {
+  cursor: pointer;
+  transition: background-color 0.5s;
+  height: 80px;
+}
+
+.updiv > div.func > div:active, .numbers .number:active {
+  background-color: var(--chrBckClr);
+  color: yellow;
+}
