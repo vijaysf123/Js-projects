@@ -50,6 +50,8 @@ body {
   font-size: 6vh;
   overflow: auto;
   min-height: 57px;
+  display: flex;
+  align-items: center;
 }
 
 .updiv > div.func {
